@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button ratingBtn = findViewById(R.id.set_rating_button);
+        final Button ratingBtn = findViewById(R.id.set_rating_button);
         final SeekBar minRatingSeekBar = findViewById(R.id.minRatingSeekBar);
         final SeekBar maxRatingSeekBar = findViewById(R.id.maxRatingSeekBar);
         final TextView minRatingInc = findViewById(R.id.minRatingIndicatorText);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     setSeekBar(maxRatingSeekBar, maxRating);
                 } else
                     setSeekBar(minRatingSeekBar, minRating);
-
+                ratingBtn.setText(String.format(Locale.getDefault(), "Rating %d-%d", minRating, maxRating));
             }
 
             @Override
@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     setSeekBar(maxRatingSeekBar, maxRating);
                 } else
                     setSeekBar(maxRatingSeekBar, maxRating);
+
+                ratingBtn.setText(String.format(Locale.getDefault(), "Rating %d-%d", minRating, maxRating));
+
             }
 
             @Override
@@ -146,9 +149,17 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Rating recorded!", Toast.LENGTH_LONG).show();
                         dialog.dismiss();
+                        minRating=0;
+                        maxRating=9;
+                        setSeekBar(minRatingSeekBar, minRating);
+                        setSeekBar(maxRatingSeekBar, maxRating);
+                        minRatingInc.setText(""+minRating);
+                        maxRatingInc.setText(""+maxRating);
+
                     }
                 });
                 dialog.show();
+
 
 
             }
