@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ratings</string>
+    <string name="rating">Rating</string>
+    <string name="rating_btn_text">Rating 0-9</string>
+    <string name="your_ratings">Your ratings</string>
+    <string name="your_rating">Your rating</string>
+</resources>

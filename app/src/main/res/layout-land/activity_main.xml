@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/set_rating_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/rating_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seeReviewsBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxRatingSeekBar" />
+
+    <TextView
+        android:id="@+id/minRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/raleway"
+        android:text="Minimum Rating"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/minRatingSeekBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minRatingIndicatorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/minRatingLabel"
+        app:layout_constraintEnd_toEndOf="@+id/minRatingSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/minRatingLabel" />
+
+    <SeekBar
+        android:id="@+id/minRatingSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:max="9"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minRatingLabel" />
+
+    <TextView
+        android:id="@+id/maxRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/raleway"
+        android:text="Maximum Rating"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/maxRatingSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/minRatingSeekBar" />
+
+    <TextView
+        android:id="@+id/maxRatingIndicatorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@+id/maxRatingLabel"
+        app:layout_constraintEnd_toEndOf="@+id/maxRatingSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/maxRatingLabel" />
+
+    <SeekBar
+        android:id="@+id/maxRatingSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:max="9"
+        android:progress="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxRatingLabel" />
+
+    <Button
+        android:id="@+id/seeReviewsBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/raleway"
+        android:text="See previous reviews"
+        app:layout_constraintBottom_toBottomOf="@+id/set_rating_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/set_rating_button"
+        app:layout_constraintTop_toTopOf="@+id/set_rating_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
